@@ -1,0 +1,8 @@
+{
+  "name": "kelasi-mobile",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "start": "echo 'Configure React Native/Expo here' && exit 0"
+  }
+}
