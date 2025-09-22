@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import api from '../../../services/api';
+import useAuth from '../../../hooks/useAuth';
 
 export default function LoginPage() {
   const navigate = useNavigate();
+  const { setAuth } = useAuth();
   const [email, setEmail] = useState('test@example.com');
   const [password, setPassword] = useState('secret123');
   const [error, setError] = useState('');
@@ -13,7 +15,7 @@ export default function LoginPage() {
     setError('');
     try {
       const { data } = await api.post('/auth/login', { email, password });
-      localStorage.setItem('token', data.token);
+      setAuth({ token: data.token, user: data.user });
       navigate('/');
     } catch (err) {
       setError('Connexion échouée');
