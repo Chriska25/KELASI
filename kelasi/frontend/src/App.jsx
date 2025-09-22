@@ -1,5 +1,6 @@
 import React from 'react';
 import { Routes, Route, Link } from 'react-router-dom';
+import LoginPage from './pages/Auth/Login/index.jsx';
 import './App.css';
 
 function Home() {
@@ -19,6 +20,7 @@ export default function App() {
       </nav>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/login" element={<LoginPage />} />
       </Routes>
     </div>
   );
