@@ -1,0 +1,5 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, Arial, sans-serif; }
+.App { padding: 16px; }
+nav { padding: 12px; background: #111827; }
+nav a { color: #fff; margin-right: 12px; text-decoration: none; }
